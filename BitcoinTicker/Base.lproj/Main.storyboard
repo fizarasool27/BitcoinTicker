@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BitcoinTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-qN-MbT" userLabel="Full Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Purplepine" translatesAutoresizingMaskIntoConstraints="NO" id="I5e-7z-gZx">
+                                        <rect key="frame" x="0.0" y="-1" width="375" height="668"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-pe-AwG">
+                                        <rect key="frame" x="0.0" y="443" width="375" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="216" id="ejO-o3-Ore"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="H4g-qN-MbT" id="RtL-QJ-bSh"/>
+                                            <outlet property="delegate" destination="H4g-qN-MbT" id="IuF-pK-mfq"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg7-Dt-rnc">
+                                        <rect key="frame" x="8" y="170" width="359" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="YfF-6e-Aok"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="54"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1V-SU-qjY">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="txK-OS-RfU">
+                                                <rect key="frame" x="67.5" y="21" width="240" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="cFB-E9-ekw"/>
+                                                    <constraint firstAttribute="width" constant="240" id="lcv-mV-o6W"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="txK-OS-RfU" firstAttribute="centerX" secondItem="c1V-SU-qjY" secondAttribute="centerX" id="acj-f6-rj6"/>
+                                            <constraint firstItem="txK-OS-RfU" firstAttribute="centerY" secondItem="c1V-SU-qjY" secondAttribute="centerY" id="qzR-2Y-1l9"/>
+                                            <constraint firstAttribute="height" constant="170" id="wlw-GP-n0w"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXh-kd-D8o" userLabel="Today's Average label">
+                                        <rect key="frame" x="44" y="280" width="149" height="163"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fpc-iG-gwv">
+                                                <rect key="frame" x="4" y="0.0" width="175.5" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dg1-qA-umD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="175.5" height="50"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Low  :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23R-BJ-3VE" userLabel="Low Label">
+                                                <rect key="frame" x="7" y="94" width="175.5" height="18.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High  :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQp-vb-a0A" userLabel="High Label">
+                                                <rect key="frame" x="4" y="61" width="175.5" height="18.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                                <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Average :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yp-ZG-1P4">
+                                                <rect key="frame" x="4" y="8" width="145" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-VD-Xpd" userLabel="Average value label">
+                                        <rect key="frame" x="225" y="280" width="150" height="163"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRD-JW-jPi">
+                                                <rect key="frame" x="0.0" y="-7" width="188" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-Lc-YFu" userLabel="Low Label Value">
+                                                <rect key="frame" x="0.0" y="91" width="188" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.31670840049999999" blue="0.33232550750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2av-hb-3aU" userLabel="High Label Value">
+                                                <rect key="frame" x="-3" y="59" width="188" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.52941176470588236" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="c1V-SU-qjY" firstAttribute="top" secondItem="H4g-qN-MbT" secondAttribute="top" id="FRT-xJ-oZD"/>
+                                    <constraint firstItem="c1V-SU-qjY" firstAttribute="leading" secondItem="H4g-qN-MbT" secondAttribute="leading" id="Gjz-QA-PvA"/>
+                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="top" secondItem="c1V-SU-qjY" secondAttribute="bottom" id="cpq-zw-rnu"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZGz-pe-AwG" secondAttribute="bottom" constant="8" id="gQW-rN-B2C"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZGz-pe-AwG" secondAttribute="trailing" id="han-oI-JPz"/>
+                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="leading" secondItem="H4g-qN-MbT" secondAttribute="leading" constant="8" id="mgD-eu-Zzd"/>
+                                    <constraint firstItem="ZGz-pe-AwG" firstAttribute="leading" secondItem="H4g-qN-MbT" secondAttribute="leading" id="tNh-l6-Ov8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jg7-Dt-rnc" secondAttribute="trailing" constant="8" id="yiX-pV-MQZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="c1V-SU-qjY" secondAttribute="trailing" id="zdA-T6-U42"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H4g-qN-MbT" secondAttribute="bottom" id="2oO-RC-J2Q"/>
+                            <constraint firstItem="H4g-qN-MbT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nj4-It-w9G"/>
+                            <constraint firstAttribute="trailing" secondItem="H4g-qN-MbT" secondAttribute="trailing" id="rKb-sH-QOv"/>
+                            <constraint firstItem="H4g-qN-MbT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s6n-dl-ToY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="averageLabel" destination="8yp-ZG-1P4" id="K6n-pw-pvz"/>
+                        <outlet property="averageValueLabel" destination="CRD-JW-jPi" id="2SL-cX-ndg"/>
+                        <outlet property="bitcoinPriceLabel" destination="Jg7-Dt-rnc" id="LGh-mP-7xe"/>
+                        <outlet property="currencyPicker" destination="ZGz-pe-AwG" id="MaK-nO-flZ"/>
+                        <outlet property="highLabel" destination="MQp-vb-a0A" id="Y97-rT-tee"/>
+                        <outlet property="highValueLabel" destination="2av-hb-3aU" id="BF0-il-hQX"/>
+                        <outlet property="lowLabel" destination="23R-BJ-3VE" id="GrB-6t-TA8"/>
+                        <outlet property="lowValueLabel" destination="0mX-Lc-YFu" id="cAR-fl-xK6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161.5" y="365.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Purplepine" width="1440" height="900"/>
+        <image name="bitcoin" width="335" height="335"/>
+    </resources>
+</document>
